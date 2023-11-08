@@ -1,0 +1,151 @@
+﻿<Window x:Class="Project_FitnessApp.BMI_Berechnen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Project_FitnessApp"
+        mc:Ignorable="d"
+        Title="BMI-Rechner" Height="487" Width="777"
+        MinWidth="700" MinHeight="380"
+        Background="Gray">
+    <DockPanel>
+        <DockPanel.Background>
+            <ImageBrush 
+                ImageSource="/Images/6.png" 
+                TileMode="None" 
+                Stretch="Fill"/>
+
+        </DockPanel.Background>
+
+        <Grid VerticalAlignment="Center" 
+              DockPanel.Dock="Top" 
+              Height="50">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="4*"/>
+                <ColumnDefinition Width="269*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label VerticalAlignment="Center" 
+                   HorizontalAlignment="Center" 
+                   Content="Wilkommen im BMI-Rechner" 
+                   Width="246" 
+                   Height="30" 
+                   Foreground="#FFE0E0E0" 
+                   FontSize="15" Grid.Column="1" 
+            />
+        </Grid>
+
+        <DockPanel LastChildFill="False">
+            <StackPanel Width="348" Height="419">
+                
+                <DockPanel Margin="0,20,0,0">
+                    <Label Content="Körpergewicht:" 
+                           Width="160" Height="41" 
+                           Foreground="White" 
+                           FontSize="20"
+                    />
+                    
+                    <TextBox Name="Eingabe_Kilogramm" 
+                             Width="40" Height="30" 
+                             Margin="0,0,0,0" 
+                             KeyUp="Eingabe_Kilogramm_KeyUp"
+                             TextAlignment="Center"
+                             FontSize="18"
+                         
+                    />
+
+                    <Label Content="kg" 
+                           Width="50" Height="41" 
+                           Foreground="White" 
+                           FontSize="20"
+                           Margin="0,0,40,0" 
+                    />
+                </DockPanel>
+
+                <DockPanel Margin="0,20,0,0">
+
+                    <Label Content="Köpergröße:" 
+                           Width="160" Height="41" 
+                           Foreground="White" 
+                           FontSize="20"
+                    />
+                    <TextBox Name="Eingabe_Groeße" 
+                             Width="40" Height="30" 
+                             Margin="0,0,0,0" 
+                             KeyUp="Eingabe_Groeße_KeyUp"
+                             TextAlignment="Center"
+                             FontSize="18"
+                    />
+
+                    <Label Content="cm" 
+                           Width="50" Height="41" 
+                           Foreground="White" 
+                           FontSize="20"
+                           Margin="0,0,40,0" 
+                    />
+                </DockPanel>
+
+                <Button Name="Berechnen_BMI" Content="BMI berechnen" Height="30" Width="100" Margin="0,25,0,0" FontFamily="Candara" FontWeight="Bold" Cursor="Hand" Click="Berechnen_BMI_Click">
+                    <Button.Template>
+                        <ControlTemplate TargetType="Button">
+                            <Border CornerRadius="10">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="Black"/>
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="2,0" EndPoint="0,9">
+                                        <GradientStop Color="Purple" Offset="8.0" />
+                                        <GradientStop Color="Blue" Offset="0.1" />
+                                        <GradientStop Color="Violet" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                            </Border>
+                        </ControlTemplate>
+                    </Button.Template>
+
+                    <Button.Style>
+                        <Style TargetType="Button">
+
+                            <Style.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True">
+
+                                    <Setter Property="RenderTransform">
+                                        <Setter.Value>
+                                            <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                        </Setter.Value>
+                                    </Setter>
+
+                                </Trigger>
+
+                            </Style.Triggers>
+
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <TextBlock Width="330" Height="180" Text=""  Margin="10,50,10,0" Name="AusgabeBMI" Foreground="#FFE0E0E0" TextWrapping="Wrap">
+
+                </TextBlock>
+
+
+
+
+
+            </StackPanel>
+
+            <StackPanel>
+
+
+            </StackPanel>
+
+
+
+
+
+        </DockPanel>
+
+
+
+    </DockPanel>
+
+
+</Window>
