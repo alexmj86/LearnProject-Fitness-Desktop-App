@@ -22,3 +22,6 @@ D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Debu
 D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Debug\net7.0-windows\Menue_BMI_rechner.baml
 D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Debug\net7.0-windows\BMI_Berechnen.g.cs
 D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Debug\net7.0-windows\BMI_Berechnen.baml
+D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\bin\Debug\net7.0-windows\Newtonsoft.Json.dll
+D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Debug\net7.0-windows\Project_FitnessApp.csproj.AssemblyReference.cache
+D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Debug\net7.0-windows\Project_FitnessApp.csproj.CopyComplete

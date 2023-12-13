@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project_FitnessApp"
         mc:Ignorable="d"
-        Title="BMI-Rechner" Height="487" Width="777"
-        MinWidth="700" MinHeight="380"
+        Title="BMI-Rechner" Height="500" Width="777"
+        MinWidth="777" MinHeight="500"
         Background="Gray">
     <DockPanel>
         <DockPanel.Background>
@@ -36,15 +36,15 @@
         </Grid>
 
         <DockPanel LastChildFill="False">
-            <StackPanel Width="348" Height="419">
-                
+            <StackPanel Margin="20,0,0,0" Width="348" Height="419">
+
                 <DockPanel Margin="0,20,0,0">
                     <Label Content="Körpergewicht:" 
                            Width="160" Height="41" 
                            Foreground="White" 
                            FontSize="20"
                     />
-                    
+
                     <TextBox Name="Eingabe_Kilogramm" 
                              Width="40" Height="30" 
                              Margin="0,0,0,0" 
@@ -85,54 +85,166 @@
                     />
                 </DockPanel>
 
-                <Button Name="Berechnen_BMI" Content="BMI berechnen" Height="30" Width="100" Margin="0,25,0,0" FontFamily="Candara" FontWeight="Bold" Cursor="Hand" Click="Berechnen_BMI_Click">
-                    <Button.Template>
-                        <ControlTemplate TargetType="Button">
-                            <Border CornerRadius="10">
-                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="Black"/>
-                                <Border.Background>
-                                    <LinearGradientBrush StartPoint="2,0" EndPoint="0,9">
-                                        <GradientStop Color="Purple" Offset="8.0" />
-                                        <GradientStop Color="Blue" Offset="0.1" />
-                                        <GradientStop Color="Violet" Offset="0.5" />
-                                    </LinearGradientBrush>
-                                </Border.Background>
-                            </Border>
-                        </ControlTemplate>
-                    </Button.Template>
+                <DockPanel Margin="0,20,0,0">
 
-                    <Button.Style>
-                        <Style TargetType="Button">
+                    <Label Content="Alter:" 
+                           Width="160" Height="41" 
+                           Foreground="White" 
+                           FontSize="20"
+                    />
+                    <TextBox Name="Eingabe_Alter" 
+                             Width="40" Height="30" 
+                             Margin="0,0,0,0" 
+                             KeyUp="Eingabe_Alter_KeyUp"
+                             TextAlignment="Center"
+                             FontSize="18"
+                    />
 
-                            <Style.Triggers>
+                    <Label Content="Jahre" 
+                           Width="55" Height="41" 
+                           Foreground="White" 
+                           FontSize="20"
+                           Margin="0,0,40,0" 
+                    />
+                </DockPanel>
 
-                                <Trigger Property="IsMouseOver" Value="True">
+                <DockPanel Margin="0,20,0,0">
 
-                                    <Setter Property="RenderTransform">
-                                        <Setter.Value>
-                                            <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
-                                        </Setter.Value>
-                                    </Setter>
+                    <Label Content="Geschlecht" 
+                           Width="160" Height="41" 
+                           Foreground="White" 
+                           FontSize="20"
+                    />
+                    <TextBox Name="Eingabe_Geschlecht" 
+                             Width="40" Height="30" 
+                             Margin="0,0,0,0" 
+                             KeyUp="Eingabe_Geschlecht_KeyUp"
+                             TextAlignment="Center"
+                             FontSize="18"
+                    />
 
-                                </Trigger>
+                    <Label Content="m/w" 
+                           Width="55" Height="41" 
+                           Foreground="White" 
+                           FontSize="20"
+                           Margin="0,0,40,0" 
+                    />
+                </DockPanel>
 
-                            </Style.Triggers>
+                <DockPanel HorizontalAlignment="Left" >
+                    <Button Name="Berechnen_BMI" Content="BMI berechnen" Height="40" Width="120" Margin="0,25,0,0" FontFamily="Candara" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="Berechnen_BMI_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="Black"/>
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="2,0" EndPoint="0,9">
+                                            <GradientStop Color="Purple" Offset="8.0" />
+                                            <GradientStop Color="Blue" Offset="0.1" />
+                                            <GradientStop Color="Violet" Offset="0.5" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
 
-                        </Style>
-                    </Button.Style>
-                </Button>
+                        <Button.Style>
+                            <Style TargetType="Button">
 
-                <TextBlock Width="330" Height="180" Text=""  Margin="10,50,10,0" Name="AusgabeBMI" Foreground="#FFE0E0E0" TextWrapping="Wrap">
+                                <Style.Triggers>
 
-                </TextBlock>
+                                    <Trigger Property="IsMouseOver" Value="True">
 
+                                        <Setter Property="RenderTransform">
+                                            <Setter.Value>
+                                                <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                            </Setter.Value>
+                                        </Setter>
 
+                                    </Trigger>
 
+                                </Style.Triggers>
 
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                </DockPanel>
+
+                <DockPanel Height="100" Width="348">
+
+                    <Grid Height="100" Width="130">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Label Content="Name:" 
+                               Height="25" 
+                               Foreground="White" 
+                               FontSize="10"
+                               VerticalAlignment="Top"
+                               Margin="-5,33,56,0" 
+                               Grid.RowSpan="2"
+                        />
+
+                        <TextBox Name="Eingabe_Name" Height="25" 
+                                 Margin="0,53,56,0" 
+                                 TextAlignment="Center"
+                                 FontSize="12"
+                                 GotFocus="Eingabe_Name_GotFocus"
+                                 LostFocus="Eingabe_Name_LostFocus" TextChanged="Eingabe_Name_TextChanged"
+                                 VerticalAlignment="Top"
+                                 Grid.Row="1"
+                        />
+                    </Grid>
+
+                    <Button Name="Speichern_BMI" Content="BMI speichern" Height="40" Width="120" Margin="-70,25,0,0" FontFamily="Candara" FontWeight="Bold" FontSize="16" Cursor="Hand" Click="Speichern_BMI_Click">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border CornerRadius="10">
+                                    <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" TextElement.Foreground="Black"/>
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="2,0" EndPoint="0,9">
+                                            <GradientStop Color="Purple" Offset="8.0" />
+                                            <GradientStop Color="Blue" Offset="0.1" />
+                                            <GradientStop Color="Violet" Offset="0.5" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+
+                                <Style.Triggers>
+
+                                    <Trigger Property="IsMouseOver" Value="True">
+
+                                        <Setter Property="RenderTransform">
+                                            <Setter.Value>
+                                                <ScaleTransform ScaleX="1.2" ScaleY="1.2"/>
+                                            </Setter.Value>
+                                        </Setter>
+
+                                    </Trigger>
+
+                                </Style.Triggers>
+
+                            </Style>
+                        </Button.Style>
+                    </Button>
+
+                </DockPanel>
 
             </StackPanel>
 
-            <StackPanel>
+            <StackPanel Width="429" Height="419">
+
+                <TextBlock Width="330" Height="125" Text=""  Margin="10,10,10,0" Name="AusgabeBMI" Foreground="#FFE0E0E0" TextWrapping="Wrap">
+
+                </TextBlock>
 
 
             </StackPanel>

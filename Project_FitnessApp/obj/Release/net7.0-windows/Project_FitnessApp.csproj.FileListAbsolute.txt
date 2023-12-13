@@ -1,0 +1,6 @@
+D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Release\net7.0-windows\BMI_Berechnen.g.cs
+D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Release\net7.0-windows\MainWindow.g.cs
+D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Release\net7.0-windows\Menue_BMI_rechner.g.cs
+D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Release\net7.0-windows\App.g.cs
+D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Release\net7.0-windows\Project_FitnessApp_MarkupCompile.cache
+D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\obj\Release\net7.0-windows\Project_FitnessApp_MarkupCompile.lref

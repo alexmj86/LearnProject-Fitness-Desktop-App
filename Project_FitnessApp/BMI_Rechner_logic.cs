@@ -11,6 +11,8 @@ namespace Project_FitnessApp
         public static string InputUserWeight { get; set; }
         public static string InputUserSize { get; set; }
         public static double FinalOutputUser { get; set; }
+        public static int Alter { get; set; }
+
 
         public static double CalculationBMI()
         {
@@ -31,6 +33,8 @@ namespace Project_FitnessApp
                 return FinalOutputUser;
             }
         }
+
+
 
 
     }

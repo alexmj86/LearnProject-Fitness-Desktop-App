@@ -9,3 +9,5 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Project_FitnessApp
 build_property.ProjectDir = D:\Alexander Mjalli\05_Programmierung\01_C# Projekte\Project_FitnessApp\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
